@@ -1,0 +1,29 @@
+import random
+
+print("como te llamas?")
+
+nombre = input()
+
+print("bien", nombre, "estoy pensando en un numero del 1 al 20")
+
+
+numrandom = random.randint(1, 20)
+
+for numerosecreto in range(1, 6):
+  
+    
+    print("adivina")
+    persona = int(input())
+    if persona > numrandom:
+        print("el numero es muy alto")
+    elif persona < numrandom:
+        print("el num es muy bajo")
+    else:
+        print("adivinaste!!")
+        break
+
+if numrandom == persona:      
+   print("adivinaste en " + str(numerosecreto) + " intento, " + nombre + " alto capo")
+else:
+    print("nop, el numero que pense es " + str(numrandom))
+         
